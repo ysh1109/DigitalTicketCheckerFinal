@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/mainlayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+
+        <RelativeLayout
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:background="@drawable/red">
+
+            <ImageView
+                android:id="@+id/imageview"
+                android:layout_width="80dp"
+                android:layout_marginHorizontal="45dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/ic_search_black_24dp"
+                />
+
+            <Button
+                android:id="@+id/bChartRAC"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="2dp"
+                android:layout_below="@+id/tvChartsPage"
+                android:layout_marginTop="105dp"
+                android:textColor="#fff"
+                android:background="@null"
+                android:layout_marginHorizontal="45dp"
+                android:text="RAC"
+                tools:ignore="UnknownId" />
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:background="@drawable/green"
+            android:layout_alignParentRight="true">
+            <ImageView
+                android:id="@+id/imageview1"
+                android:layout_width="80dp"
+                android:layout_marginTop="20dp"
+
+                android:textColor="#fff"
+                android:layout_marginHorizontal="45dp"
+                android:layout_height="80dp"
+                app:srcCompat="@drawable/ic_av_timer_black_24dp"
+                />
+
+            <Button
+                android:id="@+id/bChartWaitlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_below="@+id/tvChartsPage"
+                android:layout_marginTop="105dp"
+                android:textColor="#fff"
+                android:background="@null"
+                android:layout_marginHorizontal="45dp"
+                android:text="Waitlist"
+                tools:ignore="UnknownId" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="160dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <RelativeLayout
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:background="@drawable/purple">
+
+            <ImageView
+                android:id="@+id/imageview2"
+                android:layout_width="80dp"
+                android:layout_marginHorizontal="45dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/ic_check_circle_black_24dp"
+                />
+
+            <Button
+                android:id="@+id/bChartChecked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_below="@+id/tvChartsPage"
+                android:layout_marginTop="105dp"
+                android:textColor="#fff"
+                android:background="@null"
+                android:layout_marginHorizontal="45dp"
+                android:text="Checked"
+                tools:ignore="UnknownId" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:background="@drawable/orange"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/imageview3"
+                android:layout_width="80dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="45dp"
+                android:layout_height="80dp"
+                app:srcCompat="@drawable/ic_event_seat_black_24dp"
+                />
+
+            <Button
+                android:id="@+id/bChartsVacant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_below="@+id/tvChartsPage"
+                android:layout_marginTop="105dp"
+                android:textColor="#fff"
+                android:background="@null"
+                android:layout_marginHorizontal="45dp"
+                android:text="Vacant"
+                tools:ignore="UnknownId" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_marginTop="160dp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+
+
+            <RelativeLayout
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:id="@+id/layout1"
+                android:background="@drawable/lightbluue">
+
+                <ImageView
+                    android:id="@+id/imageview4"
+                    android:layout_width="80dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="45dp"
+                    android:layout_height="80dp"
+                    app:srcCompat="@drawable/ic_accessibility_black_24dp"
+                    />
+
+                <Button
+                    android:id="@+id/bMarkAsVacant"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_below="@+id/tvChartsPage"
+                    android:layout_marginTop="105dp"
+                    android:textColor="#fff"
+                    android:background="@null"
+                    android:layout_marginHorizontal="45dp"
+                    android:text="Mark as vacant"
+                    tools:ignore="UnknownId" />
+            </RelativeLayout>
+
+
+            </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

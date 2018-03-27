@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+
+    android:background="@drawable/gredientbackground"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="36dp">
+
+        <TextView
+            android:id="@+id/tvLoginPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageView3"
+            android:layout_marginTop="14dp"
+            android:text="Ticket Collector"
+            android:textColor="#ffff"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etLoginName"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tvLoginPage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/username"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="User ID/Name"
+            android:textColorHint="@android:color/white"
+            android:textAlignment="center"
+            android:inputType="textPassword"
+            android:password="false" />
+
+        <EditText
+            android:id="@+id/etLoginPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/password"
+            android:layout_alignStart="@+id/etLoginName"
+            android:layout_below="@+id/etLoginName"
+            android:hint="Username"
+            android:textColorHint="@android:color/white"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:textAlignment="center"
+            android:inputType="textPassword"
+            android:password="false" />
+
+        <Button
+            android:id="@+id/bLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etLoginPassword"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/btn_sign_in_background"
+            android:textColor="#fff"
+            android:text="Login" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:srcCompat="@drawable/train" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tvLoginPage"
+            android:text="Indian Railways" />
+
+    </RelativeLayout>
+</LinearLayout>

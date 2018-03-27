@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/indiaimage">
+
+    <Button
+        android:id="@+id/bCharts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/charts"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvBoardingTrainNumberShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="19dp"
+        android:layout_marginTop="1dp"
+        android:text="@string/boarding_train_number"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvBoardingStationShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/tvBoardingTrainNumberShow"
+        android:layout_below="@id/tvBoardingTrainNumberShow"
+        android:text="@string/boarding_station"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/scanner"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bCharts"
+        android:layout_alignEnd="@+id/tvBoardingTrainNumberShow"
+        android:background="@drawable/btn_sign_in_background"
+        android:onClick="scanQR"
+        android:text="@string/qr_code"
+        android:textColor="@android:color/background_light" />
+
+    <Button
+        android:id="@+id/bGetPNRList"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvBoardingStationShow"
+        android:layout_alignBottom="@+id/tvBoardingStationShow"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/btn_sign_in_background"
+        android:text="@string/get_pnr_list"
+        android:textColor="@android:color/background_light" />
+
+</RelativeLayout>

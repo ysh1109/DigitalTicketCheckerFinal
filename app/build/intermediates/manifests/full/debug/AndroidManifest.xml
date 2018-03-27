@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.madhur.digitalticketchecker"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="26" />
+
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher_new"
+        android:label="Train Tickets"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.madhur.digitalticketchecker.REST"
+            android:label="REST" >
+            <intent-filter>
+                <action android:name="android.intent.action.REST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.madhur.digitalticketchecker.Base_activity"
+            android:label="Base_activity" >
+            <intent-filter>
+                <action android:name="android.intent.action.BASEACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.madhur.digitalticketchecker.LoginPage"
+            android:label="LoginPage" >
+            <intent-filter>
+                <action android:name="android.intent.action.LOGINPAGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.madhur.digitalticketchecker.Boarding"
+            android:label="Boarding" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOARDING" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.madhur.digitalticketchecker.QRCodeScanner"
+            android:label="QRCodeScanner" >
+            <intent-filter>
+                <action android:name="android.intent.action.QRCODESCANNER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.madhur.digitalticketchecker.List_Seat_As_Vacant"
+            android:label="List_Seat_As_Vacant" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAKESEATVACANT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.madhur.digitalticketchecker.List_Vacant_Seats"
+            android:label="List_Vacant_Seats" >
+            <intent-filter>
+                <action android:name="android.intent.action.LISTVACANTSEATS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.madhur.digitalticketchecker.List_Unverified_Pnr"
+            android:label="List_Unverified_Pnr"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.UNVERIFIEDPNR" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.madhur.digitalticketchecker.ChartRAC"
+            android:label="ChartRAC" >
+            <intent-filter>
+                <action android:name="android.intent.action.DISPLAYLISTV" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.madhur.digitalticketchecker.Manually_enter_pnr"
+            android:label="Manually_enter_pnr" >
+            <intent-filter>
+                <action android:name="android.intent.action.MANUALYENTERPNR" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.madhur.digitalticketchecker.ChartsChecked"
+            android:label="ChartsChecked" >
+            <intent-filter>
+                <action android:name="android.intent.action.CHARTSCHECKED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.madhur.digitalticketchecker.Introduction"
+            android:label="Introduction" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.madhur.digitalticketchecker.WelcomeActivity"
+            android:theme="@style/AppThemeNoActionBar" >
+        </activity>
+        <activity android:name="com.example.madhur.digitalticketchecker.Charts" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT" />
+    </application>
+
+</manifest>

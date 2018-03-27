@@ -1,0 +1,4 @@
+#Tue Mar 27 03:43:45 IST 2018
+base.0=/Users/madhur/Desktop/arjun/DTC monday 10 pm/digitalticketchecker/app/build/intermediates/transforms/dexMerger/debug/3
+path.0=classes.dex
+renamed.0=classes.dex

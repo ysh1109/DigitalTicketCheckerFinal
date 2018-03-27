@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#697dfd</color>
+    <color name="colorPrimaryDark">#4971a9</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="btn_color">#FF4971A9</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FFDB1515</color>
+    <color name="green">#FF1C960F</color>
+    <color name="slide_1">#557cf9</color>
+    <color name="slide_2">#40d214</color>
+    <color name="slide_3">#e1ca00</color>
+    <color name="slide_4">#d40a07</color>
+    <color name="active_dots">#ffffff</color>
+    <color name="inactive_dots">#8d8d8e</color>
+    <color name="rippleEffectColor">#557cf9</color>
+    <color name="btnSignIn">#043df7</color>
+
+
+</resources>

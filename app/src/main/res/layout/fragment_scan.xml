@@ -1,0 +1,33 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.madhur.digitalticketchecker.ScanFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <Button
+        android:id="@+id/scanner"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/enter_pnr_manually_btn"
+        android:layout_alignStart="@+id/enter_pnr_manually_btn"
+        android:layout_gravity="center"
+        android:layout_marginBottom="39dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="@string/qr_code"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"></Button>
+
+    <TextView
+        android:id="@+id/scan_fragment_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SCAN TICKET"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+</FrameLayout>

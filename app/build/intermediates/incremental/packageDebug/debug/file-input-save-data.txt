@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Tue Mar 27 10:22:36 IST 2018
+0.baseType=DIRECTORY
+0.base=/Users/madhur/Desktop/arjun/DTC Tuesday 4 AM/digitalticketchecker/app/build/intermediates/transforms/dexMerger/debug/18
+0.path=classes.dex
+0.set=DEX
+count=1

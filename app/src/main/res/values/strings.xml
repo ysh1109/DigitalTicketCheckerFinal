@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">DigitalTicketChecker</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="enter_seat_berth_no">Enter Seat/Berth No.</string>
+    <string name="seat_number">Seat Number</string>
+    <string name="coach_number">Coach Number</string>
+    <string name="enter_coach_no">Enter Coach No.</string>
+    <string name="mark_as_vacant_seat">Mark As Vacant Seat!</string>
+    <string name="train_no">Train No.</string>
+    <string name="rest">REST</string>
+    <string name="charts">Charts</string>
+    <string name="boarding_train_number">Boarding Train Number</string>
+    <string name="boarding_station">Boarding Station</string>
+    <string name="get_pnr_list">Get Pnr List</string>
+    <string name="list_a_seat_as_vacant">Mark Seat as VACANT</string>
+    <string name="get_vacant_seats_list">LIST VACANT SEATS</string>
+    <string name="coach_no_vacant_seats">Coach No.</string>
+    <string name="coch_with_cat">Category</string>
+    <string name="all_coaches">For all Coaches</string>
+    <string name="one_coach">For One Coach</string>
+    <string name="list_vacant_seats">List Vacant Seats</string>
+    <string name="qr_code">SCAN TICKET</string>
+    <string name="bar_code">BAR CODE - TICKET SCAN</string>
+    <string name="scan">Scan</string>
+    <string name="verification_status">Verification_status</string>
+    <string name="sample_text2">Sample text2</string>
+    <string name="sample_text3">Sample text3</string>
+    <string name="sample_text1">Sample text1</string>
+    <string name="station_name">Station Name</string>
+    <string name="nav_title_charts">Charts</string>
+    <string name="nav_title_scan">Scan</string>
+    <string name="nav_title_update">Update</string>
+    <string name="my_preference">com.abc.com.MyPref</string>
+    <string name="my_preference_key">com.abc.com.MyPrefKey</string>
+     <string name="slider_1">Digital ticket checker</string>
+    <string name="slider_2">Conveniently check tickets</string>
+     <string name="slider_3">Look through optimised charts.</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

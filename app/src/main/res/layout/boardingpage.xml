@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/gredientbackground"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/tvBoardingPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="111dp"
+            android:text="Boarding Details"
+            android:textColor="#fff"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etBoardingTrainNumber"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tvBoardingPage"
+            android:textColorHint="@android:color/white"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="39dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_layout"
+            android:ems="10"
+            android:hint="   Train Number" />
+
+        <EditText
+            android:id="@+id/etBoardingStation"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:paddingLeft="15dp"
+            android:layout_alignStart="@+id/etBoardingTrainNumber"
+            android:layout_below="@+id/etBoardingTrainNumber"
+            android:textColorHint="@android:color/white"
+
+            android:layout_marginTop="23dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_layout"
+            android:ems="10"
+            android:hint="    Station" />
+
+        <Button
+            android:id="@+id/bBoardingSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etBoardingStation"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/btn_sign_in_background"
+            android:text="Submit"
+            android:textColor="#fff" />
+
+    </RelativeLayout>
+</LinearLayout>

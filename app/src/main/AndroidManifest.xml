@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.madhur.digitalticketchecker">
+
+    <uses-permission android:name="android.permission.INTERNET">
+
+    </uses-permission>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_new"
+        android:label="Train Tickets"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".REST"
+            android:label="REST">
+            <intent-filter>
+                <action android:name="android.intent.action.REST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Base_activity"
+            android:label="Base_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.BASEACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginPage"
+            android:label="LoginPage">
+            <intent-filter>
+                <action android:name="android.intent.action.LOGINPAGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Boarding"
+            android:label="Boarding">
+            <intent-filter>
+                <action android:name="android.intent.action.BOARDING" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".QRCodeScanner"
+            android:label="QRCodeScanner">
+            <intent-filter>
+                <action android:name="android.intent.action.QRCODESCANNER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".List_Seat_As_Vacant"
+            android:label="List_Seat_As_Vacant">
+            <intent-filter>
+                <action android:name="android.intent.action.MAKESEATVACANT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".List_Vacant_Seats"
+            android:label="List_Vacant_Seats">
+            <intent-filter>
+                <action android:name="android.intent.action.LISTVACANTSEATS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".List_Unverified_Pnr"
+            android:windowSoftInputMode="adjustPan"
+            android:label="List_Unverified_Pnr">
+            <intent-filter>
+                <action android:name="android.intent.action.UNVERIFIEDPNR" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ChartRAC"
+            android:label="ChartRAC">
+            <intent-filter>
+                <action android:name="android.intent.action.DISPLAYLISTV" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Manually_enter_pnr"
+            android:label="Manually_enter_pnr">
+            <intent-filter>
+                <action android:name="android.intent.action.MANUALYENTERPNR" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ChartsChecked"
+            android:label="ChartsChecked">
+            <intent-filter>
+                <action android:name="android.intent.action.CHARTSCHECKED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".Introduction"
+            android:label="Introduction">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name=".WelcomeActivity"
+            android:theme="@style/AppThemeNoActionBar">
+
+
+        </activity>
+
+        <activity android:name=".Charts"/>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+
+
+    </application>
+
+</manifest>

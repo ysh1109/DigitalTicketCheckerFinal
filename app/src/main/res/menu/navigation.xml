@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_scan"
+        android:icon="@drawable/ic_scan_icon"
+        android:title="@string/nav_title_scan" />
+
+    <item
+        android:id="@+id/navigation_charts"
+        android:icon="@drawable/ic_charts_icon"
+        android:title="@string/nav_title_charts" />
+
+    <item
+        android:id="@+id/navigation_update"
+        android:icon="@drawable/ic_update_icon_nav"
+        android:title="@string/nav_title_update" />
+
+</menu>

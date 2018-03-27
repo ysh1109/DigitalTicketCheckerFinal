@@ -39,11 +39,11 @@ public class Base_activity extends AppCompatActivity {
 
         scan_nav = new ScanFragment();
         charts_nav = new ChartsFragment();
-        update_nav = new UpdateFragment();
 
         scan_nav.setArguments(d);
-        update_nav.setArguments(d);
         charts_nav.setArguments(d);
+
+        set_view(scan_nav);
 
         BottomNavigationView b_n = (BottomNavigationView) findViewById(R.id.bottom_navigation);
 
@@ -57,10 +57,6 @@ public class Base_activity extends AppCompatActivity {
                     case R.id.navigation_charts:
                         menu_entry = 1;
                         set_view(charts_nav);
-                        return true;
-                    case R.id.navigation_update:
-                        menu_entry = 2;
-                        set_view(update_nav);
                         return true;
                     default:
                         return false;

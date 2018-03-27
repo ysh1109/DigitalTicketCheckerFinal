@@ -42,7 +42,7 @@ public class Boarding extends Activity {
                 Bundle etBoardingStationBasket = new Bundle();
                 etBoardingStationBasket.putString("etBoardingStationBasketKey",etBoardingStation.getText().toString());
 
-                Intent openQRCodeScanner = new Intent(Boarding.this,QRCodeScanner.class);
+                Intent openQRCodeScanner = new Intent("android.intent.action.BASEACTIVITY");
                 openQRCodeScanner.putExtras(etBoardingTrainNumberBasket);
                 openQRCodeScanner.putExtras(etBoardingStationBasket);
                 startActivity(openQRCodeScanner);

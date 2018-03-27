@@ -26,6 +26,7 @@ import static android.support.v7.app.AlertDialog.*;
 public class QRCodeScanner extends Activity {
 
     Button bCharts;
+    Button bscan;
     Button bGetPNRList;
     TextView tvBoardingTrainNumberShow;
     TextView tvBoardingStationShow;
@@ -35,7 +36,7 @@ public class QRCodeScanner extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.qrcodescanner);
-        View a = getCurrentFocus();
+        final View a = getCurrentFocus();
 
         bCharts = (Button) findViewById(R.id.bCharts);
         bGetPNRList = (Button) findViewById(R.id.bGetPNRList);
@@ -50,7 +51,13 @@ public class QRCodeScanner extends Activity {
         String boardingStation = gotBoardingStationBasket.getString("etBoardingStationBasketKey");
         tvBoardingStationShow.setText(boardingStation);
 
-        scanQR(a);
+        bscan = (Button)findViewById(R.id.scanner);
+        bscan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scanQR(a);
+            }
+        });
 
 
     }

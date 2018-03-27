@@ -1,33 +1,71 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.madhur.digitalticketchecker.ScanFragment">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/indiaimage">
 
-    <!-- TODO: Update blank fragment layout -->
 
+
+    <TextView
+        android:id="@+id/tvBoardingTrainNumberShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:textSize="15sp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginTop="1dp"
+        android:textStyle="bold"
+        android:text="@string/boarding_train_number" />
+
+    <TextView
+        android:id="@+id/tvBoardingStationShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/tvBoardingTrainNumberShow"
+        android:layout_below="@id/tvBoardingTrainNumberShow"
+        android:textSize="15sp"
+        android:text="@string/boarding_station" />
 
     <Button
         android:id="@+id/scanner"
-        android:layout_width="250dp"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/enter_pnr_manually_btn"
-        android:layout_alignStart="@+id/enter_pnr_manually_btn"
-        android:layout_gravity="center"
-        android:layout_marginBottom="39dp"
-        android:background="@color/colorPrimaryDark"
-        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="292dp"
+        android:background="@drawable/btn_sign_in_background"
+        android:onClick="scanQR"
         android:text="@string/qr_code"
         android:textColor="@android:color/background_light"
-        android:textSize="18sp"></Button>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bGetPNRList" />
 
-    <TextView
-        android:id="@+id/scan_fragment_title"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/bGetPNRList"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:text="SCAN TICKET"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:layout_alignBaseline="@+id/tvBoardingStationShow"
+        android:layout_alignBottom="@+id/tvBoardingStationShow"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/btn_sign_in_background"
+        android:text="@string/get_pnr_list"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.928"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+</android.support.constraint.ConstraintLayout>
+
+

@@ -1,129 +1,179 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.madhur.digitalticketchecker.ChartsFragment">
+    android:layout_margin="10dp"
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/Chart_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CHARTS"
-        android:textAlignment="center"
-        android:textSize="18sp" />
+    <RelativeLayout
+        android:id="@+id/mainlayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="parent">
+        <RelativeLayout
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:background="@drawable/red">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="30dp">
+            <ImageView
+                android:id="@+id/imageview"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginHorizontal="45dp"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/ic_search_black_24dp" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            <Button
+                android:id="@+id/rac_image_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/tvChartsPage"
+                android:layout_marginHorizontal="45dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="105dp"
+                android:background="@null"
+                android:text="RAC"
+                android:textColor="#fff"
+                tools:ignore="UnknownId" />
+        </RelativeLayout>
 
 
-            <LinearLayout
+        <RelativeLayout
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/green">
+
+            <ImageView
+                android:id="@+id/imageview1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+
+                android:layout_marginHorizontal="45dp"
+                android:layout_marginTop="20dp"
+                android:textColor="#fff"
+                app:srcCompat="@drawable/ic_av_timer_black_24dp" />
+
+            <Button
+                android:id="@+id/bChartWaitlist"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_below="@+id/tvChartsPage"
+                android:layout_marginHorizontal="45dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="105dp"
+                android:background="@null"
+                android:text="Waitlist"
+                android:textColor="#fff"
+                tools:ignore="UnknownId" />
 
-                <ImageButton
-                    android:id="@+id/vacant_seats_image_btn"
-                    android:layout_width="177dp"
-                    android:layout_height="177dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/ic_vacant_seats" />
+        </RelativeLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="VACANT"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
 
-            <LinearLayout
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="160dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <RelativeLayout
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:background="@drawable/purple">
+
+            <ImageView
+                android:id="@+id/imageview2"
+                android:layout_width="80dp"
+                android:layout_marginHorizontal="45dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/ic_check_circle_black_24dp"
+                />
+
+            <Button
+                android:id="@+id/verified_tickets_image_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_below="@+id/tvChartsPage"
+                android:layout_marginHorizontal="45dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="105dp"
+                android:background="@null"
+                android:text="Checked"
+                android:textColor="#fff"
+                tools:ignore="UnknownId" />
+        </RelativeLayout>
 
-                <ImageButton
-                    android:id="@+id/reserved_seats_image_btn"
-                    android:layout_width="177dp"
-                    android:layout_height="177dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/ic_reservation" />
+        <RelativeLayout
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:background="@drawable/orange"
+            android:layout_alignParentRight="true">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="REERVATION CHART"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
+            <ImageView
+                android:id="@+id/imageview3"
+                android:layout_width="80dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="45dp"
+                android:layout_height="80dp"
+                app:srcCompat="@drawable/ic_event_seat_black_24dp"
+                />
 
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <LinearLayout
+            <Button
+                android:id="@+id/vacant_seats_image_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_below="@+id/tvChartsPage"
+                android:layout_marginHorizontal="45dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="105dp"
+                android:background="@null"
+                android:text="Vacant"
+                android:textColor="#fff"
+                tools:ignore="UnknownId" />
 
-                <ImageButton
-                    android:id="@+id/rac_image_btn"
-                    android:layout_width="177dp"
-                    android:layout_height="177dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/ic_rac" />
+        </RelativeLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
+
+        <RelativeLayout
+            android:layout_marginTop="160dp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+
+
+            <RelativeLayout
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:id="@+id/layout1"
+                android:background="@drawable/lightbluue">
+
+                <ImageView
+                    android:id="@+id/imageview4"
+                    android:layout_width="80dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="45dp"
+                    android:layout_height="80dp"
+                    app:srcCompat="@drawable/ic_accessibility_black_24dp"
+                    />
+
+                <Button
+                    android:id="@+id/bMarkAsVacant"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="RAC"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                    android:layout_marginLeft="2dp"
+                    android:layout_below="@+id/tvChartsPage"
+                    android:layout_marginTop="105dp"
+                    android:textColor="#fff"
+                    android:background="@null"
+                    android:layout_marginHorizontal="45dp"
+                    android:text="Mark as vacant"
+                    tools:ignore="UnknownId" />
+            </RelativeLayout>
 
-                <ImageButton
-                    android:id="@+id/verified_tickets_image_btn"
-                    android:layout_width="177dp"
-                    android:layout_height="177dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/ic_verified_tickets" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="CHECKED"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
-
-</FrameLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

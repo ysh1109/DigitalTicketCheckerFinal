@@ -23,12 +23,18 @@
 
     <TextView
         android:id="@+id/tvBoardingStationShow"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@id/tvBoardingTrainNumberShow"
         android:layout_below="@id/tvBoardingTrainNumberShow"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/boarding_station"
         android:textSize="15sp"
-        android:text="@string/boarding_station" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintStart_toEndOf="@+id/tvBoardingTrainNumberShow"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/scanner"
@@ -38,7 +44,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="292dp"
+        android:layout_marginTop="264dp"
         android:background="@drawable/btn_sign_in_background"
         android:onClick="scanQR"
         android:text="@string/qr_code"
@@ -62,10 +68,27 @@
         android:text="@string/get_pnr_list"
         android:textColor="@android:color/background_light"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.928"
+        app:layout_constraintHorizontal_bias="0.756"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/manual_enter_pnr_no"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_sign_in_background"
+        android:onClick="scanQR"
+        android:text="ENTER PNR"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scanner"></Button>
 </android.support.constraint.ConstraintLayout>
 
 

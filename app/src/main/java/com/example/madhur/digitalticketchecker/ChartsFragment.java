@@ -19,10 +19,10 @@ public class ChartsFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
 
-    Button btnRAC_chart;
-//    ImageButton btnUnverified_chart;
-    Button btnVacant_chart;
-    Button btnVerified_chart;
+    ImageButton btnRAC_chart;
+    ImageButton mark_as_vacant_btn;
+    ImageButton btnVacant_chart;
+    ImageButton btnVerified_chart;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -59,7 +59,7 @@ public class ChartsFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState){
 
 
-        btnRAC_chart = (Button)getView().findViewById(R.id.rac_image_btn);
+        btnRAC_chart = (ImageButton)getView().findViewById(R.id.rac_image_btn);
         btnRAC_chart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,19 +71,21 @@ public class ChartsFragment extends Fragment {
             }
         });
 
-//        btnUnverified_chart = (ImageButton) getView().findViewById(R.id.reserved_seats_image_btn);
-//        btnUnverified_chart.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent openLISTUNVERIFIEDPNR = new Intent("android.intent.action.UNVERIFIEDPNR");
-//                Bundle tn = new Bundle();
-//                tn.putString("train_no", Train_no);
-//                openLISTUNVERIFIEDPNR.putExtras(tn);
-//                startActivity(openLISTUNVERIFIEDPNR);
-//            }
-//        });
+        mark_as_vacant_btn = (ImageButton)getView().findViewById(R.id.mark_seat_as_vacant_image_btn);
+        mark_as_vacant_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent openLISTSEATASVACANT = new Intent("android.intent.action.MAKESEATVACANT");
 
-        btnVacant_chart = (Button)getView().findViewById(R.id.vacant_seats_image_btn);
+                Bundle tn = new Bundle();
+                tn.putString("train_no", Train_no);
+                openLISTSEATASVACANT.putExtras(tn);
+
+                startActivity(openLISTSEATASVACANT);
+            }
+        });
+
+        btnVacant_chart = (ImageButton)getView().findViewById(R.id.vacant_seats_image_btn);
         btnVacant_chart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -95,7 +97,7 @@ public class ChartsFragment extends Fragment {
             }
         });
 
-        btnVerified_chart = (Button)getView().findViewById(R.id.verified_tickets_image_btn);
+        btnVerified_chart = (ImageButton)getView().findViewById(R.id.verified_tickets_image_btn);
         btnVerified_chart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

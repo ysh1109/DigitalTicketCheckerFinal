@@ -43,17 +43,17 @@
             android:id="@+id/etLoginPassword"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:background="@drawable/password"
             android:layout_alignStart="@+id/etLoginName"
             android:layout_below="@+id/etLoginName"
-            android:hint="Username"
-            android:textColorHint="@android:color/white"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
+            android:background="@drawable/password"
             android:ems="10"
-            android:textAlignment="center"
+            android:hint="Password"
             android:inputType="textPassword"
-            android:password="false" />
+            android:password="false"
+            android:textAlignment="center"
+            android:textColorHint="@android:color/white" />
 
         <Button
             android:id="@+id/bLogin"

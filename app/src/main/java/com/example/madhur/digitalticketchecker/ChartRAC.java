@@ -9,7 +9,6 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -70,8 +69,8 @@ public class ChartRAC extends Activity{
             try {
                 URL url = new URL(json_url);
                 JSONObject get_rac = new JSONObject();
-                get_rac.put("ticket_status", "RAC 01");
                 get_rac.put("train_no", Train_no);
+                get_rac.put("ticket_status", "RAC 01");
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 OutputStream write_request = httpURLConnection.getOutputStream();

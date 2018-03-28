@@ -29,7 +29,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="304dp"
         android:text="Digital Ticket Checker"
         android:textColor="#ffffff"
         android:textSize="20dp"

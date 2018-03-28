@@ -37,7 +37,7 @@ public class Boarding extends Activity {
             public void onClick(View view) {
 
                 Bundle etBoardingTrainNumberBasket = new Bundle();
-                etBoardingTrainNumberBasket.putString("etBoardingTrainNumberBasketKey",etBoardingTrainNumber.getText().toString());
+                etBoardingTrainNumberBasket.putString("train_no","12304");
 
                 Bundle etBoardingStationBasket = new Bundle();
                 etBoardingStationBasket.putString("etBoardingStationBasketKey",etBoardingStation.getText().toString());

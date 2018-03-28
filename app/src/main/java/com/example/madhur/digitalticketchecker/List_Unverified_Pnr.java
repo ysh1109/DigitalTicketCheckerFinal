@@ -60,7 +60,15 @@ public class List_Unverified_Pnr extends Activity {
     ArrayList<String> passenger_gender_array_u = new ArrayList<String>();
     ArrayList<String> verification_status_array_u = new ArrayList<String>();
     ListView parsed_data;
-
+    public void clear_lists(){
+        pnr_array_u.clear();
+        passenger_age_array_u.clear();
+        seat_no_array_u.clear();
+        coach_no_array_u.clear();
+        passenger_age_array_u.clear();
+        passenger_gender_array_u.clear();
+        verification_status_array_u.clear();
+    }
     protected void onCreate(@Nullable Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.unverified_seats_list);
@@ -81,16 +89,25 @@ public class List_Unverified_Pnr extends Activity {
             @SuppressLint("LongLogTag")
             @Override
             public void onClick(View v) {
-                pnr_array_u.clear();
-                passenger_age_array_u.clear();
-                seat_no_array_u.clear();
-                coach_no_array_u.clear();
-                passenger_age_array_u.clear();
-                passenger_gender_array_u.clear();
-                verification_status_array_u.clear();
+                clear_lists();
                 coach_no_val = (EditText)findViewById(R.id.enter_coach_number_pnr);
                 error = (TextView)findViewById(R.id.error_text_view);
 
+
+                for_all.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        coach_no_val.setVisibility(View.GONE);
+                    }
+                });
+                for_one_coach.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        coach_no_val.setVisibility(View.VISIBLE);
+                        coach_no_val.requestFocus();
+                    }
+                });
                 Log.w("coach_no_val is ",coach_no_val.getText().toString());
                 if(for_all.isChecked()){
                     try {

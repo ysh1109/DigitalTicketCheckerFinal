@@ -8,10 +8,10 @@
 
     <ImageButton
         android:id="@+id/rac_image_btn"
-        android:layout_width="170dp"
+        android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/red"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -19,51 +19,55 @@
 
     <ImageButton
         android:id="@+id/imageButton2"
-        android:layout_width="170dp"
+        android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/green"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/rac_image_btn"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_av_timer_black_24dp" />
 
     <ImageButton
         android:id="@+id/verified_tickets_image_btn"
-        android:layout_width="170dp"
+        android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="168dp"
         android:background="@drawable/purple"
-        app:layout_constraintEnd_toStartOf="@+id/vacant_seats_image_btn"
-        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rac_image_btn"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_check_circle_black_24dp" />
 
     <ImageButton
         android:id="@+id/vacant_seats_image_btn"
-        android:layout_width="170dp"
+        android:layout_width="150dp"
         android:layout_height="150dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="156dp"
         android:background="@drawable/orange"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/verified_tickets_image_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01"
         app:srcCompat="@drawable/ic_event_seat_black_24dp" />
 
     <ImageButton
         android:id="@+id/mark_seat_as_vacant_image_btn"
-        android:layout_width="170dp"
+        android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="16dp"
         android:background="@drawable/lightbluue"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/verified_tickets_image_btn"
         app:srcCompat="@drawable/ic_accessibility_black_24dp" />
 
     <TextView
@@ -72,13 +76,13 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="116dp"
         android:text="RAC"
         android:textColor="@color/white"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/imageButton2"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.295"
         app:layout_constraintStart_toStartOf="@+id/rac_image_btn"
         app:layout_constraintTop_toTopOf="@+id/rac_image_btn" />
 

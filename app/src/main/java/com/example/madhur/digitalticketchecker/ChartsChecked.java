@@ -49,7 +49,6 @@ public class ChartsChecked extends Activity{
 
         Bundle bundle = getIntent().getExtras();
         Train_no = bundle.getString("train_no");
-        Log.w("tra_no is : ",Train_no);
         new get_verified_seats_background().execute();
     }
 

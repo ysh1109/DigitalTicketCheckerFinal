@@ -37,6 +37,9 @@ public class ScanFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent scn = new Intent("android.intent.action.QRCODESCANNER");
+                Bundle tn = new Bundle();
+                tn.putString("train_no", Train_no);
+                scn.putExtras(tn)
                 startActivity(scn);
             }
         });
@@ -46,6 +49,9 @@ public class ScanFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent chrt = new Intent("android.intent.action.UNVERIFIEDPNR");
+                Bundle tn = new Bundle();
+                tn.putString("train_no", Train_no);
+                chrt.putExtras(tn);
                 startActivity(chrt);
             }
         });

@@ -7,22 +7,22 @@
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.1.0"
-    timestamp="1522210507625"
+    timestamp="1522211004341"
     token="-1474285528448559570"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="788" />
+        duration="1451" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="252" />
+        duration="89" />
     <task
         name="verifier"
-        duration="47" />
+        duration="5" />
 
     <artifact
         location="/home/user101/GitProjects/DigitalTicketCheckerFinal/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
@@ -75,7 +75,7 @@
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1522210507625"
+        timestamp="1522211004341"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/home/user101/GitProjects/DigitalTicketCheckerFinal/app/build/intermediates/split-apk/debug/slices/slice_3.apk"

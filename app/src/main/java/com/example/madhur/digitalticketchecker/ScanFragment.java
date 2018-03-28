@@ -39,7 +39,7 @@ public class ScanFragment extends Fragment {
                 Intent scn = new Intent("android.intent.action.QRCODESCANNER");
                 Bundle tn = new Bundle();
                 tn.putString("train_no", Train_no);
-                scn.putExtras(tn)
+                scn.putExtras(tn);
                 startActivity(scn);
             }
         });

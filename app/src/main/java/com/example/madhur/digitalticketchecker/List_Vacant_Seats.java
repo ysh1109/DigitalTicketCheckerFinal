@@ -10,6 +10,7 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -50,7 +51,7 @@ public class List_Vacant_Seats extends Activity {
     String requestURL_v_s="";
     StringBuilder vacant_coach_response=new StringBuilder();
     String Train_no;
-
+    Window w;
     ArrayList coach_names = new ArrayList<String>();
     ArrayList seat_numbers = new ArrayList<String>();
 
@@ -58,7 +59,8 @@ public class List_Vacant_Seats extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.vacant_seats_list);
-
+        w=getWindow();
+        w.setTitle("VACANT SEATS LIST");
         final RadioGroup seat_category = (RadioGroup) findViewById(R.id.vacant_seats_in);
 //        final RadioButton coach_by_name = (RadioButton)findViewById(R.id.specific_coach);
 //        final RadioButton all_the_coaches = (RadioButton)findViewById(R.id.all_coaches);

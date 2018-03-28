@@ -23,7 +23,7 @@
         </activity>
         <activity
             android:name=".Base_activity"
-            android:label="Base_activity">
+            android:label="Charts">
             <intent-filter>
                 <action android:name="android.intent.action.BASEACTIVITY" />
 

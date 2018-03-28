@@ -30,34 +30,36 @@ public class QRCodeScanner extends Activity {
     Button bGetPNRList;
     TextView tvBoardingTrainNumberShow;
     TextView tvBoardingStationShow;
+    Window w;
     static final String ACTION_SCAN = "com.google.zxing.client.android.SCAN";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.qrcodescanner);
+//        setContentView(R.layout.qrcodescanner);
         final View a = getCurrentFocus();
+//        w=getWindow();
+//        w.setTitle("MARK TICKETS");
+//        bCharts = (Button) findViewById(R.id.bCharts);
+//        bGetPNRList = (Button) findViewById(R.id.bGetPNRList);
+//        tvBoardingTrainNumberShow = (TextView)findViewById(R.id.tvBoardingTrainNumberShow);
+//        tvBoardingStationShow = (TextView)findViewById(R.id.tvBoardingStationShow);
 
-        bCharts = (Button) findViewById(R.id.bCharts);
-        bGetPNRList = (Button) findViewById(R.id.bGetPNRList);
-        tvBoardingTrainNumberShow = (TextView)findViewById(R.id.tvBoardingTrainNumberShow);
-        tvBoardingStationShow = (TextView)findViewById(R.id.tvBoardingStationShow);
+//        Bundle gotBoardingTrainNumberBasket = getIntent().getExtras();
+//        String boardingTrainNumber = gotBoardingTrainNumberBasket.getString("etBoardingTrainNumberBasketKey");
+//        tvBoardingTrainNumberShow.setText(boardingTrainNumber);
 
-        Bundle gotBoardingTrainNumberBasket = getIntent().getExtras();
-        String boardingTrainNumber = gotBoardingTrainNumberBasket.getString("etBoardingTrainNumberBasketKey");
-        tvBoardingTrainNumberShow.setText(boardingTrainNumber);
+//        Bundle gotBoardingStationBasket = getIntent().getExtras();
+//        String boardingStation = gotBoardingStationBasket.getString("etBoardingStationBasketKey");
+//        tvBoardingStationShow.setText(boardingStation);
 
-        Bundle gotBoardingStationBasket = getIntent().getExtras();
-        String boardingStation = gotBoardingStationBasket.getString("etBoardingStationBasketKey");
-        tvBoardingStationShow.setText(boardingStation);
-
-        bscan = (Button)findViewById(R.id.scanner);
-        bscan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+//        bscan = (Button)findViewById(R.id.scanner);
+//        bscan.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
                 scanQR(a);
-            }
-        });
+//            }
+//        });
 
 
     }
@@ -135,13 +137,13 @@ public class QRCodeScanner extends Activity {
         }
 
 
-        bCharts.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(QRCodeScanner.this, Charts.class);
-                startActivity(intent);
-            }
-        });
+//        bCharts.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(QRCodeScanner.this, Charts.class);
+//                startActivity(intent);
+//            }
+//        });
 
         /*bGetPNRList.setOnClickListener(new View.OnClickListener() {
             @Override

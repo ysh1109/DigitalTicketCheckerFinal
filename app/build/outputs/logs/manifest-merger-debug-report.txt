@@ -100,7 +100,7 @@ ADDED from /home/user101/GitProjects/DigitalTicketCheckerFinal/app/src/main/Andr
 activity#com.example.madhur.digitalticketchecker.Base_activity
 ADDED from /home/user101/GitProjects/DigitalTicketCheckerFinal/app/src/main/AndroidManifest.xml:24:9-32:20
 	android:label
-		ADDED from /home/user101/GitProjects/DigitalTicketCheckerFinal/app/src/main/AndroidManifest.xml:26:13-42
+		ADDED from /home/user101/GitProjects/DigitalTicketCheckerFinal/app/src/main/AndroidManifest.xml:26:13-35
 	android:name
 		ADDED from /home/user101/GitProjects/DigitalTicketCheckerFinal/app/src/main/AndroidManifest.xml:25:13-42
 intent-filter#action:name:android.intent.action.BASEACTIVITY+category:name:android.intent.category.DEFAULT

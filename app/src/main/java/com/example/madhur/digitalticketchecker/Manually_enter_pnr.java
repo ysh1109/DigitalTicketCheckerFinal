@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.renderscript.ScriptGroup;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -31,12 +32,15 @@ public class Manually_enter_pnr extends Activity {
     EditText pnr_no_entered;
     Button verify_ticket;
     TextView error;
+    Window w;
+
     TextView done;
     @Override
     protected void onCreate(@Nullable Bundle savedInstance) {
         super.onCreate(savedInstance);
         setContentView(R.layout.enter_pnr_verify);
-
+        w=getWindow();
+        w.setTitle("VERIFY TICKET PNR");
         verify_ticket = (Button)findViewById(R.id.verify_by_only_pnr_btn);
         pnr_no_entered = (EditText)findViewById(R.id.manual_enter_pnr_no);
         error = (TextView)findViewById(R.id.manual_pnr_error);

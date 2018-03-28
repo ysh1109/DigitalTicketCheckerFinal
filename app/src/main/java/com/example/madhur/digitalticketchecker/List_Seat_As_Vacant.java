@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.Button;
 import org.json.JSONException;
@@ -30,7 +31,7 @@ public class List_Seat_As_Vacant extends Activity {
     StringBuilder stringBuilder = new StringBuilder();
     String[] values_list = new String[2];
     String Train_no;
-
+    Window w = getWindow();
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +40,9 @@ public class List_Seat_As_Vacant extends Activity {
         Coach_Number = (EditText)findViewById(R.id.vacant_list_coach_no);
         Seat_Number = (EditText)findViewById(R.id.seat_no);
         Train_no = getIntent().getExtras().getString("train_no");
+
+//        w.setTitle("LIST SEAT AS VACANT");
+
         make_vacant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

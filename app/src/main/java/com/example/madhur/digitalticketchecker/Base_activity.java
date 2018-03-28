@@ -31,8 +31,6 @@ public class Base_activity extends AppCompatActivity {
 
         The_Train_Number = getIntent().getExtras().getString("train_no");
 
-        train_display = (TextView)findViewById(R.id.display_train_number);
-        train_display.setText(The_Train_Number);
 
         Bundle d = new Bundle();
         d.putString("train_no", The_Train_Number);

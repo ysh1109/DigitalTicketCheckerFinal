@@ -4,15 +4,19 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.renderscript.ScriptGroup;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.RadioButton;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -36,11 +40,16 @@ import java.util.List;
 public class List_Unverified_Pnr extends Activity {
     Button get_list_unver;
     Spinner boarding_station_choice;
+    TextView error;
+    JSONObject get_unverified_pnrs = new JSONObject();
     EditText coach_no_val;
     ArrayList<String> train_stoppage_stations= new ArrayList<String>();
     String coach_name_to_send;
     String boarding_station_name_to_send;
     String Train_no;
+    Window w;
+    RadioButton for_all;
+    RadioButton for_one_coach;
 
     BaseAdapter2 unverified_tickets_adapter;
     ArrayList<String> pnr_array_u = new ArrayList<String>();
@@ -61,9 +70,13 @@ public class List_Unverified_Pnr extends Activity {
         parsed_data = (ListView)findViewById(R.id.unverified_pnr_list_view);
 
         Train_no = getIntent().getExtras().getString("train_no");
+        for_all = (RadioButton)findViewById(R.id.get_chart_for_all);
+        for_one_coach = (RadioButton)findViewById(R.id.get_chart_for_coach);
+
 
 //        new Get_Train_Info().execute();
-//
+        w=getWindow();
+        w.setTitle("PNR LIST");
         get_list_unver.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("LongLogTag")
             @Override
@@ -75,9 +88,39 @@ public class List_Unverified_Pnr extends Activity {
                 passenger_age_array_u.clear();
                 passenger_gender_array_u.clear();
                 verification_status_array_u.clear();
+                coach_no_val = (EditText)findViewById(R.id.enter_coach_number_pnr);
+                error = (TextView)findViewById(R.id.error_text_view);
+
+                Log.w("coach_no_val is ",coach_no_val.getText().toString());
+                if(for_all.isChecked()){
+                    try {
+                        get_unverified_pnrs.put("train_no", Train_no);
+                        get_unverified_pnrs.put("verification_status", "P");
+
+                        new Unverified_Seats_Background().execute();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+                else if(for_one_coach.isChecked()){
+                    if(coach_no_val.getText().toString()!=""){
+                    try {
+                        get_unverified_pnrs.put("train_no", Train_no);
+                        get_unverified_pnrs.put("verification_status", "P");
+                        get_unverified_pnrs.put("coach_no",coach_no_val.getText());
+
+                        new Unverified_Seats_Background().execute();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                        }
+                    }
+                    else{
+                        error.setText("Please Enter Coach Number first!");
+                    }
+                }
+
                 Log.w("unverified is clicked","clicked");
                 parsed_data.setAdapter(null);
-                new Unverified_Seats_Background().execute();
             }
         });
     }
@@ -146,7 +189,6 @@ public class List_Unverified_Pnr extends Activity {
 //    }
     protected class Unverified_Seats_Background extends AsyncTask<Void, Void, String>{
         String request_url="http://159.89.163.178/passengers/";
-        JSONObject get_unverified_pnrs = new JSONObject();
         StringBuilder pnrs_unverified_response = new StringBuilder();
         @Override
         protected String doInBackground(Void... voids){
@@ -155,8 +197,6 @@ public class List_Unverified_Pnr extends Activity {
                 HttpURLConnection pnr_info_connection = (HttpURLConnection)url.openConnection();
                 pnr_info_connection.setRequestMethod("POST");
 
-                get_unverified_pnrs.put("train_no", Train_no);
-                get_unverified_pnrs.put("verification_status", "P");
                 //get_unverified_pnrs.put("boarding_station", boarding_station_name_to_send);
                 //get_unverified_pnrs.put("coach_no", coach_name_to_send);
 
@@ -182,9 +222,8 @@ public class List_Unverified_Pnr extends Activity {
                 e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
-            } catch (JSONException e) {
-                e.printStackTrace();
             }
+
 
             return pnrs_unverified_response.toString().trim();
         }

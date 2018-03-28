@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
 
@@ -23,6 +24,7 @@ public class ChartsFragment extends Fragment {
     ImageButton mark_as_vacant_btn;
     ImageButton btnVacant_chart;
     ImageButton btnVerified_chart;
+    Window w;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -36,6 +38,7 @@ public class ChartsFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
@@ -48,7 +51,6 @@ public class ChartsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         Train_no = getArguments().getString("train_no");
-
 
         return inflater.inflate(R.layout.fragment_charts, container, false);
 

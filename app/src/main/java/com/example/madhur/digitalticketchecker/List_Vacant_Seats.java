@@ -54,7 +54,7 @@ public class List_Vacant_Seats extends Activity {
     Window w;
     ArrayList coach_names = new ArrayList<String>();
     ArrayList seat_numbers = new ArrayList<String>();
-
+    EditText coach_no_val;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -62,13 +62,20 @@ public class List_Vacant_Seats extends Activity {
         w=getWindow();
         w.setTitle("VACANT SEATS LIST");
         final RadioGroup seat_category = (RadioGroup) findViewById(R.id.vacant_seats_in);
-//        final RadioButton coach_by_name = (RadioButton)findViewById(R.id.specific_coach);
-//        final RadioButton all_the_coaches = (RadioButton)findViewById(R.id.all_coaches);
+        final RadioButton coach_by_name = (RadioButton)findViewById(R.id.vacant_one_coach);
+        final RadioButton all_the_coaches = (RadioButton)findViewById(R.id.all_coaches);
+        coach_no_val = (EditText)findViewById(R.id.vacant_enter_coach);
 
         final Button vacant_seat_finder = (Button)findViewById(R.id.list_vacant_seats_btn);
 //        final EditText enter_coach = (EditText)findViewById(R.id.vacant_list_coach_name);
 
         Train_no = getIntent().getExtras().getString("train_no");
+        coach_by_name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                coach_no_val.requestFocus();
+            }
+        });
 
          vacant_coach_list_view= (ListView)findViewById(R.id.list_view_vacant_coach);
 //        coach_by_name.setOnClickListener(new View.OnClickListener() {
@@ -101,30 +108,30 @@ public class List_Vacant_Seats extends Activity {
 //                enter_coach.setText("");
 //            }
 //        });
-        vacant_seat_finder.setOnClickListener(new View.OnClickListener() {
+        vacant_seat_finder.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v) {
 
                 coach_names.clear();
                 seat_numbers.clear();
-
-//                if(coach_by_name.isChecked()){
-//                    coach = enter_coach.getText().toString();
-                    request_vacant_coaches = new JSONObject();
-                    try {
-//                        request_vacant_coaches.put("coach_no",coach);
-                        request_vacant_coaches.put("train_no",Train_no);
-                        request_vacant_coaches.put("verification_status","U");
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-//                    }
+                request_vacant_coaches = new JSONObject();
+                try
+                {
+                    request_vacant_coaches.put("train_no", Train_no);
+                    request_vacant_coaches.put("verification_status", "U");
+                    if (coach_by_name.isChecked())
+                    {
+                        request_vacant_coaches.put("coach_no", coach_no_val.getText().toString());
+                    }
                 }
-//                InputMethodManager imm = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
-//                imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+                catch (JSONException e) {
+                     e.printStackTrace();
+                }
+
                 new BackgroundTask_v_c().execute();
             }
         });
-
     }
     public class BackgroundTask_v_c extends AsyncTask< Void, Void, String>{
 

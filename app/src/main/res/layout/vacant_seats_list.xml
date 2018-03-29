@@ -29,12 +29,12 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="72dp"
         android:background="@color/colorPrimaryDark"
         android:text="@string/get_vacant_seats_list"
         android:textColor="@android:color/background_light"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintHorizontal_bias="0.102"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -62,6 +62,13 @@
             android:text="@string/all_coaches"
             tools:layout_editor_absoluteX="218dp"
             tools:layout_editor_absoluteY="66dp" />
+
+        <RadioButton
+            android:id="@+id/vacant_one_coach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/one_coach" />
 
         <!--<RadioButton-->
             <!--android:id="@+id/specific_coach"-->
@@ -106,5 +113,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.902" />
+
+    <EditText
+        android:id="@+id/vacant_enter_coach"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/coach_number"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

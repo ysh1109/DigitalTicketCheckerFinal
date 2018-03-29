@@ -8,9 +8,15 @@ import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
 import android.widget.Button;
+
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
+
 import android.util.Log;
+import android.widget.TextView;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -93,15 +99,33 @@ public class List_Seat_As_Vacant extends Activity {
             bufferedReader.close();
             RAC.close();
             httpURLConnection.disconnect();
+            }
+            catch (MalformedURLException e)
+            {
+                e.printStackTrace();
+                }
+            catch (IOException e){
+               e.printStackTrace();
+            } catch (JSONException e) {
+               e.printStackTrace();
+             }
+
             return stringBuilder.toString().trim();
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (IOException e){
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
         }
-            return null;}
+        @Override
+        protected void onPostExecute(String res){
+                TextView changed = (TextView) findViewById(R.id.marked_as_vacant_done);
+
+                //JSONArray r = new JSONArray(res);
+                //JSONObject k = r.getJSONObject(0);
+                Log.w("THE RESULT ",res);
+                if((res.equalsIgnoreCase("\"CHANGED!!\""))==true){
+                    changed.setText("SEAT HAS BEEN LISTED AS VACANT");
+                }
+                else{
+                    changed.setText("INVALID REQUEST");
+                }
+        }
     }
 }
 

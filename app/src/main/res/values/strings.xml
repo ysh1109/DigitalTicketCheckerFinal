@@ -5,9 +5,9 @@
     <string name="title_notifications">Notifications</string>
     <string name="enter_seat_berth_no">Enter Seat/Berth No.</string>
     <string name="seat_number">Seat Number</string>
-    <string name="coach_number">Coach Number</string>
+    <string name="coach_number">Coach No.</string>
     <string name="enter_coach_no">Enter Coach No.</string>
-    <string name="mark_as_vacant_seat">Mark As Vacant Seat!</string>
+    <string name="mark_as_vacant_seat">MARK THIS SEAT VACANT</string>
     <string name="train_no">Train No.</string>
     <string name="rest">REST</string>
     <string name="charts">Charts</string>
@@ -37,6 +37,8 @@
      <string name="slider_1">Digital ticket checker</string>
     <string name="slider_2">Conveniently check tickets</string>
      <string name="slider_3">Look through optimised charts.</string>
+    <string name="pnr_is">PNR : </string>
+    <string name="confirm_verification">Verifiy Above Passengers</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

@@ -109,32 +109,34 @@ public class List_Unverified_Pnr extends Activity {
                     }
                 });
                 Log.w("coach_no_val is ",coach_no_val.getText().toString());
-                if(for_all.isChecked()){
+//                if(for_all.isChecked()){
                     try {
                         get_unverified_pnrs.put("train_no", Train_no);
                         get_unverified_pnrs.put("verification_status", "P");
-
-                        new Unverified_Seats_Background().execute();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else if(for_one_coach.isChecked()){
-                    if(coach_no_val.getText().toString()!=""){
-                    try {
-                        get_unverified_pnrs.put("train_no", Train_no);
-                        get_unverified_pnrs.put("verification_status", "P");
-                        get_unverified_pnrs.put("coach_no",coach_no_val.getText());
-
-                        new Unverified_Seats_Background().execute();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
+                        if(for_one_coach.isChecked()&&coach_no_val.getText().toString()!=null){
+                            get_unverified_pnrs.put("coach_no",coach_no_val.getText());
                         }
+                        new Unverified_Seats_Background().execute();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
                     }
-                    else{
-                        error.setText("Please Enter Coach Number first!");
-                    }
-                }
+//                }
+//                else if(for_one_coach.isChecked()){
+//                    if(coach_no_val.getText().toString()!=""){
+//                    try {
+//                        get_unverified_pnrs.put("train_no", Train_no);
+//                        get_unverified_pnrs.put("verification_status", "P");
+//                        get_unverified_pnrs.put("coach_no",coach_no_val.getText());
+//
+//                        new Unverified_Seats_Background().execute();
+//                    } catch (JSONException e) {
+//                        e.printStackTrace();
+//                        }
+//                    }
+//                    else{
+//                        error.setText("Please Enter Coach Number first!");
+//                    }
+//                }
 
                 Log.w("unverified is clicked","clicked");
                 parsed_data.setAdapter(null);

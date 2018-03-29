@@ -86,4 +86,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/vacant_list_coach_no" />
+
+    <TextView
+        android:id="@+id/marked_as_vacant_done"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_vacant_btn" />
 </android.support.constraint.ConstraintLayout>
